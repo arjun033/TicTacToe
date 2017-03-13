@@ -1,5 +1,6 @@
 package com.tictactoe.gameplay;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.tictactoe.gameelements.CellMarker;
@@ -89,7 +90,13 @@ public class TicTacToeGame {
 		while(true){
 			if(firstPlayer.isHuman()){
 				System.out.println("Make your move: ");
-				cellNum = sc.nextInt();
+				try{
+					cellNum = sc.nextInt();
+				} catch (InputMismatchException e) {
+					System.out.println("That's not a valid number !!");
+					sc.next();
+					continue;
+				}
 				if(!gameBoard.isValidMove(cellNum)){
 					System.out.println("I can't let you make that move !!");
 					continue;
@@ -107,7 +114,14 @@ public class TicTacToeGame {
 				PrintUtils.printGameBoard(gameBoard);
 				if(gameBoard.isGameOver(firstPlayer, k)) break;
 				System.out.println("Make your move: ");
-				cellNum = sc.nextInt();
+				try{
+					cellNum = sc.nextInt();
+				} catch (InputMismatchException e) {
+					System.out.println("That's not a valid number !!");
+					sc.next();
+					swapPlayerTurns();
+					continue;
+				}
 				if(!gameBoard.isValidMove(cellNum)){
 					System.out.println("I can't let you make that move !!");
 					swapPlayerTurns();
