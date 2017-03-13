@@ -68,7 +68,7 @@ public class TicTacToeGame {
 		
 		//Initializing player objects
 		System.out.println("Choose your marker: (X/O)");
-		String marker = sc.next();
+		String marker = sc.nextLine().trim();
 		if(marker.equalsIgnoreCase(CellMarker.CROSS.getCellMarkerValue())){
 			firstPlayer = new Player(true, CellMarker.CROSS);
 			secondPlayer = new Player(false, CellMarker.NOUGHT);
@@ -91,10 +91,9 @@ public class TicTacToeGame {
 			if(firstPlayer.isHuman()){
 				System.out.println("Make your move: ");
 				try{
-					cellNum = sc.nextInt();
-				} catch (InputMismatchException e) {
+					cellNum = Integer.parseInt(sc.nextLine().trim());
+				} catch (NumberFormatException e) {
 					System.out.println("That's not a valid number !!");
-					sc.next();
 					continue;
 				}
 				if(!gameBoard.isValidMove(cellNum)){
@@ -115,10 +114,9 @@ public class TicTacToeGame {
 				if(gameBoard.isGameOver(firstPlayer, k)) break;
 				System.out.println("Make your move: ");
 				try{
-					cellNum = sc.nextInt();
-				} catch (InputMismatchException e) {
+					cellNum = Integer.parseInt(sc.nextLine().trim());
+				} catch (NumberFormatException e) {
 					System.out.println("That's not a valid number !!");
-					sc.next();
 					swapPlayerTurns();
 					continue;
 				}
