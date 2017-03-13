@@ -6,7 +6,7 @@ import com.tictactoe.utils.PrintUtils;
 
 /**
  * This class represents a game board that contains
- * a m x n grid of cells
+ * an m x n grid of cells
  * @author arjunb
  *
  */
