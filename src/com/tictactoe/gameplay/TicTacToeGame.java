@@ -1,6 +1,5 @@
 package com.tictactoe.gameplay;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.tictactoe.gameelements.CellMarker;
