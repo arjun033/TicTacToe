@@ -2,7 +2,7 @@ This is a very naive implementation of the game Tic-Tac-Toe. The game by default
 
 User Input Format -
 
-![Alt text](http://imgur.com/a/DQKQK "Input Format")
+![Alt text](http://imgur.com/sInnZ58 "Input Format")
 
 The user, when promted, needs to enter a number ranging from 1-9 (for a 3x3 game).
 
