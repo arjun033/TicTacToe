@@ -1,10 +1,8 @@
-This is a very naive implementation of the game Tic-Tac-Toe. The game by default runs on a 3x3 board with 3 contiguous markers resulting in a victory. This default configuration can be changed in the TicTacToeGame class.
+This is a very naive implementation of the game Tic-Tac-Toe. The game by default runs on a 3x3 board on the console with 3 contiguous markers resulting in a victory. This default configuration can be changed in the TicTacToeGame class to turn it into an m,n,k game.
 
 User Input Format -
 
-_1_|_2_|_3_|
-_4_|_5_|_6_|
-_7_|_8_|_9_|
+![Input Format](http://i.imgur.com/sInnZ58.png)
 
 The user, when promted, needs to enter a number ranging from 1-9 (for a 3x3 game).
 
